@@ -1,0 +1,19 @@
+server:
+  port: 8082
+
+spring:
+  main:
+    banner-mode: "off"
+  data:
+    mongodb:
+      uri: mongodb://localhost/insurance
+
+logging:
+  # Uncomment this pattern when the AccessLogFilter is enabled
+  #pattern.level: %5p [requestId=%X{requestId}]
+  level:
+    ROOT: INFO
+    com.adeliosys: DEBUG
+    #org.springframework: DEBUG
+    #org.springframework.security: DEBUG
+
