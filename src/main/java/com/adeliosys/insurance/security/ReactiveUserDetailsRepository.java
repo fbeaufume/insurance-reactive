@@ -11,8 +11,7 @@ import reactor.core.publisher.Mono;
 /**
  * Service used to load the user details during authentication.
  */
-// TODO FBE use this instead of the in-memory user details service
-//@Service
+@Service
 public class ReactiveUserDetailsRepository implements ReactiveUserDetailsService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ReactiveUserDetailsRepository.class);

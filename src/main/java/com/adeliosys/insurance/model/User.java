@@ -1,10 +1,11 @@
 package com.adeliosys.insurance.model;
 
 import org.springframework.data.mongodb.core.mapping.Document;
-/*import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
-import org.springframework.security.core.userdetails.UserDetails;*/
+import org.springframework.security.core.userdetails.UserDetails;
 
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -12,9 +13,9 @@ import java.util.List;
  * An application user.
  */
 @Document
-public class User { //} implements UserDetails {
+public class User implements UserDetails {
 
-    //private static List<GrantedAuthority> USER_ROLES = AuthorityUtils.createAuthorityList("ROLE_USER");
+    private static List<GrantedAuthority> USER_ROLES = AuthorityUtils.createAuthorityList("ROLE_USER");
 
     private static final List<User> defaultUsers = Collections.singletonList(new User("1", "user", "pass"));
 
@@ -58,7 +59,7 @@ public class User { //} implements UserDetails {
         return password;
     }
 
-    /*@Override
+    @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return USER_ROLES;
     }
@@ -82,9 +83,4 @@ public class User { //} implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
-
-    @Override
-    public String getName() {
-        return username;
-    }*/
 }
