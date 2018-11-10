@@ -10,9 +10,9 @@ import org.springframework.web.server.WebFilterChain;
 import reactor.core.publisher.Mono;
 
 /**
- * Servlet filter that logs the request duration in the logs.
+ * Request filter that logs the request duration in the logs.
  * Adding a request ID in all application logs through SLF4J MDC
- * does not work as multiple threads are involved when processing
+ * does not work since multiple threads are involved when processing
  * the request.
  */
 @Component
